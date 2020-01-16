@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <title>Cart</title>
+</head>
+<body>
+  <i class="fa fa-bars" aria-hidden="true" onclick="openNav()"></i>
+  <div id="mySidenav" class="sidenav">
+     <a href="javascript:void(0)" class="closesbtn" onclick="closeNav()">&times;</a>
+     <a href="#">Home</a>
+     <a href="#">About</a>
+     <a href="#">Products</a>
+     <a href="#">Contact</a>
+     <a href="#">Cart</a>
+   </div>
+
+<div class="shopping-cart">
+
+  <div class="column-labels">
+    <label class="product-image">Image</label>
+    <label class="product-details">Product</label>
+    <label class="product-price">Kaina</label>
+    <label class="product-quantity">Kiekis</label>
+    <label class="product-removal">Ištrinti</label>
+    <label class="product-line-price">Išviso</label>
+  </div>
+
+  <div class="product">
+    <div class="product-image">
+      <img src="./images/pica.png">
+    </div>
+    <div class="product-details">
+      <div class="product-title">Vezuvijaus</div>
+      <p class="product-description">Mocarelos sūris, soninė, vištiena, krevetės, picų padažas</p>
+    </div>
+    <div class="product-price">12.99</div>
+    <div class="product-quantity">
+      <input type="number" value="2" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Ištrinti
+      </button>
+    </div>
+    <div class="product-line-price">25.98</div>
+  </div>
+
+  <div class="product">
+    <div class="product-image">
+      <img src="./images/drink.png">
+    </div>
+    <div class="product-details">
+        <div class="product-title">Vezuvijaus</div>
+        <p class="product-description">Mocarelos sūris, soninė, vištiena, krevetės, picų padažas</p>
+    </div>
+    <div class="product-price">45.99</div>
+    <div class="product-quantity">
+      <input type="number" value="1" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+       Ištrinti
+      </button>
+    </div>
+    <div class="product-line-price">45.99</div>
+  </div>
+
+  <div class="totals">
+    <div class="totals-item">
+      <label>Išviso</label>
+      <div class="totals-value" id="cart-subtotal">71.97</div>
+    </div>
+    <div class="totals-item">
+      <label>PVM (21%)</label>
+      <div class="totals-value" id="cart-tax">3.60</div>
+    </div>
+    <div class="totals-item">
+      <label>Pristatymas</label>
+      <div class="totals-value" id="cart-shipping">15.00</div>
+    </div>
+    <div class="totals-item totals-item-total">
+      <label>galutinė kaina</label>
+      <div class="totals-value" id="cart-total">90.57</div>
+    </div>
+  </div>
+      
+      <button class="checkout">Pirkti</button>
+
+</div>
+<script src="./js/sidenav.js"></script>    
+</body>
+</html>
