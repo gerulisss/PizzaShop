@@ -1,17 +1,18 @@
 
 .slideshow-container {
-  margin-bottom: 150px;
+  margin-top: 80px;
   height: 50px;
   position: relative;
+  padding-bottom: 500px;
 }
 
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 300%;
+  top: 50%;
   width: auto;
   padding: 16px;
-  margin-top: 150px;
+  margin-top: -50px;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -64,3 +65,11 @@
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+
+  @media (min-width: 1800px) {
+    
+    .slideshow-container {
+        margin-bottom: 100px;
+      }
+    }
