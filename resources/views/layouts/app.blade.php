@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img src="{{URL::asset('/logo.png')}}" alt="logo" width="120">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -49,6 +49,75 @@
                                 </li>
                             @endif
                         @else
+                        <!-- Pizza Menu -->
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                               Produktų tipai
+                                                           </a>
+                                                           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                               <a class="dropdown-item" href="{{ route('group.index') }}">
+                                                                   tipų sąrašas
+                                                               </a>
+                                                               <a class="dropdown-item" href="{{ route('group.create') }}">
+                                                                   Sukurti tipą
+                                                               </a>
+                                                           </div>
+                                                       </li>
+
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                               Produktų grupės
+                                                           </a>
+                                                           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                               <a class="dropdown-item" href="{{ route('group.index') }}">
+                                                                   grupių sąrašas
+                                                               </a>
+                                                               <a class="dropdown-item" href="{{ route('group.create') }}">
+                                                                   Sukurti grupe
+                                                               </a>
+                                                           </div>
+                                                       </li>
+                                                       <li class="nav-item dropdown">
+                                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                                                           Produktai
+                                                                                       </a>
+                                                                                       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                                                           <a class="dropdown-item" href="{{ route('group.index') }}">
+                                                                                                Produktų sąrašas
+                                                                                           </a>
+                                                                                           <a class="dropdown-item" href="{{ route('group.create') }}">
+                                                                                               Sukurti produktą
+                                                                                           </a>
+                                                                                       </div>
+                                                                                   </li>                            
+                                                                                   <li class="nav-item dropdown">
+                                                                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                                                                                       Ingredientai
+                                                                                                                   </a>
+                                                                                                                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                                                                                       <a class="dropdown-item" href="{{ route('group.index') }}">
+                                                                                                                           Ingredientų sąrašas
+                                                                                                                       </a>
+                                                                                                                       <a class="dropdown-item" href="{{ route('group.create') }}">
+                                                                                                                           Sukurti ingredientą
+                                                                                                                       </a>
+                                                                                                                   </div>
+                                                                                                               </li>
+
+                                                                                                               <li class="nav-item dropdown">
+                                                                                                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                                                                                                                   Produktų ingredientai
+                                                                                                                                               </a>
+                                                                                                                                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                                                                                                                   <a class="dropdown-item" href="{{ route('group.index') }}">
+                                                                                                                                                       Produktų ingredientų sąrašas
+                                                                                                                                                   </a>
+                                                                                                                                                   <a class="dropdown-item" href="{{ route('group.create') }}">
+                                                                                                                                                       Sukurti produkto ingredientą
+                                                                                                                                                   </a>
+                                                                                                                                               </div>
+                                                                                                                                           </li>
+                        <!-- Pizza Menu -->
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

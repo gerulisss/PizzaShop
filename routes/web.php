@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['register'=>false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -28,4 +28,14 @@ Route::group(['prefix' => 'types'], function(){
     Route::post('update/{type}', 'TypeController@update')->name('type.update');
     Route::post('delete/{type}', 'TypeController@destroy')->name('type.destroy');
     Route::get('show/{type}', 'TypeController@show')->name('type.show');
+ });
+
+ Route::group(['prefix' => 'groups'], function(){
+    Route::get('', 'GroupController@index')->name('group.index');
+    Route::get('create', 'GroupController@create')->name('group.create');
+    Route::post('store', 'GroupController@store')->name('group.store');
+    Route::get('edit/{group}', 'GroupController@edit')->name('group.edit');
+    Route::post('update/{group}', 'GroupController@update')->name('group.update');
+    Route::post('delete/{group}', 'GroupController@destroy')->name('group.destroy');
+    Route::get('show/{group}', 'GroupController@show')->name('group.show');
  });

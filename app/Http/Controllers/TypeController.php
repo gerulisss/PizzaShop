@@ -38,6 +38,7 @@ class TypeController extends Controller
     {
         $type = new Type;
         $type->title = $request->type_title;
+        $type->priority = $request->type_priority;
         $type->save();
         return redirect()->route('type.index');
     }
@@ -74,6 +75,7 @@ class TypeController extends Controller
     public function update(Request $request, Type $type)
     {
         $type->title = $request->type_title;
+        $type->priority = $request->type_priority;
         $type->save();
         return redirect()->route('type.index');
     }
