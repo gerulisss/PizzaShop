@@ -10,8 +10,8 @@
  
 <form method="POST" action="{{route('group.store')}}">
     <br>
-    Title: <input type="text" name="group_title" class="form-control">
-    Priority: <input type="text" name="group_priority" class="form-control">
+    Pavadinimas: <input type="text" name="group_title" class="form-control">
+    Prioritetas: <input type="text" name="group_priority" class="form-control">
     <br>
     @csrf
     <button type="submit" class="btn btn-outline-primary">Sukurti</button>

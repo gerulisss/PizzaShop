@@ -91,4 +91,9 @@ class TypeController extends Controller
         $type->delete();
         return redirect()->route('type.index');
     }
+    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }

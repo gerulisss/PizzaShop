@@ -18,9 +18,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
-    <div id="app">
+ <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -55,10 +56,10 @@
                                                                Produktų tipai
                                                            </a>
                                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                                               <a class="dropdown-item" href="{{ route('group.index') }}">
+                                                               <a class="dropdown-item" href="{{ route('type.index') }}">
                                                                    tipų sąrašas
                                                                </a>
-                                                               <a class="dropdown-item" href="{{ route('group.create') }}">
+                                                               <a class="dropdown-item" href="{{ route('type.create') }}">
                                                                    Sukurti tipą
                                                                </a>
                                                            </div>
@@ -117,6 +118,7 @@
                                                                                                                                                    </a>
                                                                                                                                                </div>
                                                                                                                                            </li>
+                                                                                                                                           
                         <!-- Pizza Menu -->
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -140,7 +142,6 @@
                 </div>
             </div>
         </nav>
-
         <main class="py-4">
             @yield('content')
         </main>
