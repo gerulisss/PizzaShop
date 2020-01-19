@@ -61,7 +61,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         .nav-right {
             display: inline-block;
             float: right;
-            margin-top: 20px;
+            margin-top: 10px;
         }   
         .headers_links {
             display: inline-block;
@@ -73,6 +73,17 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             padding: 10px 0;
             color: #000;
             position: relative;
+        }
+
+       .nav-right .fa-cart-arrow-down {
+        display: inline-block;
+        margin-top: 15px;
+        margin-left: 20px;
+        width: 45px;
+        height: 45px;
+        color: red;
+        font-size: 30px;
+        line-height: 30px;
         }
 .sticky {
     position: fixed;
