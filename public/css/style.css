@@ -1,0 +1,246 @@
+body,
+body * {
+margin: 0;
+padding: 0;
+vertical-align: top;
+box-sizing: border-box;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.item1 { grid-area: header; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+       'header header header header header header'
+      ' footer footer footer footer footer footer';
+    grid-gap: 10px;
+    margin-top: 50px;
+
+}
+
+.mobile {
+    display: inline-block;
+    width: 100%;
+    min-height: 50px;
+    background-color: #fff;
+}
+
+    .mobile .row {
+    margin: 0 20px;
+    }
+
+
+  .header-fixed {
+    display: inline-block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+}
+.navbar {
+    display: inline-block;
+    width: 100%;
+    min-height: 50px;
+    background-color: #fff;
+
+}
+    .navbar > .row {
+        display: inline-block;
+        width: 1200px;
+        margin: 0 calc( 50% - 600px );
+    }
+        .logo-text {
+            display: inline-block;
+            float: left;
+            width: 30%;
+        }
+        .nav-right {
+            display: inline-block;
+            float: right;
+            margin-top: 10px;
+        }   
+        .headers_links {
+            display: inline-block;
+            font-size: 20px;
+            text-decoration: none;
+            margin-left: 15px;              
+            font-weight: bold;
+            margin-top: 10px;
+            padding: 10px 0;
+            color: #000;
+            position: relative;
+        }
+
+       .nav-right .fa-cart-arrow-down {
+        display: inline-block;
+        margin-top: 15px;
+        margin-left: 20px;
+        width: 45px;
+        height: 45px;
+        color: red;
+        font-size: 30px;
+        line-height: 30px;
+        }
+.sticky {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .sticky .first_logo {
+    color: #f34236;
+   }
+
+   .sticky .nav-right .headers_links {
+       color: #000;
+   }
+
+   .sticky .nav-right .headers_links:after{
+       background-color: #f34236;
+   }
+
+   header img {
+    display: inline-block;
+    float: left;
+    padding: 20px;
+    width: 160px;
+    margin-left: -10px;
+    
+}
+
+
+    .hero img {
+        margin-top: 80px;
+        width: 100%;
+        position: relative;
+        margin-bottom: 4em;
+        height: 70%;
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
+
+.brand-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.brand { font-size: 20px; }
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 30px;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 7.4px;
+}
+
+   
+  
+  .grid-container > .item5 {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 40px 0;
+    font-size: 20px;
+    margin-top: 60px;
+  }
+
+  #item1 {
+    background-color: lime;
+
+}
+
+#item5 {
+    background-color: orange;
+
+}
+
+main {
+    display: grid;
+    gap: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+
+h3, p {
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    margin-left: 7px;
+    transition: margin 0.5s;
+}
+
+.card img:hover {
+    margin-top: -5px;
+	margin-bottom: 5px;
+}
+
+.fa-bars {
+    display: none;
+}
+
+.sidenav {
+    display: none;
+}
+
+.sidenavb {
+  display: none;
+}
+
+
+.footer {
+    display: inline-block;
+    width: 100%;
+    background-color:rgb(33, 33, 33);
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-logo {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+   .footer-text {
+        color: #999;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+.left {
+    width: 29%;
+    float: left;
+}
+

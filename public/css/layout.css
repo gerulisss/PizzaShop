@@ -1,0 +1,196 @@
+@media (max-width: 1300px) {
+    #header {
+        display: none;
+    }
+
+      .sidenavb {
+          display: inline-block;
+      }
+      .sidenav {
+          display: inline-block;
+      }
+
+      .fa-bars {
+    display: inline-block;
+    }
+    .hero {
+        display: none;
+    }
+    main {
+
+        margin-top: 70px;
+    }
+
+    .slideshow-container {
+        display: none;
+    }
+
+    main {
+        padding-top: 50px;
+}
+
+
+@media (max-width: 1100px) {
+    main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #header {
+        display: none;
+    }
+    
+    
+    .sidenavb {
+        display: inline-block;
+    }
+    .sidenav {
+        display: inline-block;
+    }
+
+    .fa-bars {
+        display: inline-block;
+        }
+
+    h3, p {
+        text-align: center;
+    }
+
+    .hero {
+        display: none;
+    }
+    main {
+
+        margin-top: 70px;
+    }
+    .slideshow-container {
+        display: none;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    #header {
+        display: none;
+    }
+
+      .sidenavb {
+        display: inline-block;
+    }
+    .sidenav {
+        display: inline-block;
+    }
+
+    .fa-bars {
+        display: inline-block;
+        }
+
+    .card .drink {
+        width: 80%;
+        margin-left: 26px;
+    }
+    .card  {
+        width: 80%;
+        margin-left: 29px;
+    }
+
+    h3, p {
+        text-align: center;
+    }
+
+    .hero {
+        display: none;
+    }
+    main {
+
+        margin-top: 70px;
+    }
+    .slideshow-container {
+        display: none;
+    }
+
+  }
+
+@media (max-width: 500px) {
+
+    #header {
+        display: none;
+    }
+    
+
+      .sidenavb {
+          display: inline-block;
+      }
+      .sidenav {
+          display: inline-block;
+      }
+
+      .fa-bars {
+    display: inline-block;
+    }
+
+
+    main {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .hero {
+        display: none;
+    }
+    main {
+
+        margin-top: 70px;
+    }
+    .slideshow-container {
+        display: none;
+    }
+
+  }
+  
+
+  @media (max-width: 300px) {
+     main {
+    margin-left: 0px;
+    margin-right: 0px;
+
+  } 
+
+  .card {
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+
+  .card .drink {
+    width: 80%;
+    margin-left: 20px;
+}
+.hero {
+    display: none;
+}
+  }
+
+  @media (max-width: 250px) {
+    main {
+   margin-left: -35px;
+   margin-right: -35px;
+
+ } 
+
+ .card {
+     width: 200px;
+    margin-left: 15px;
+    margin-right: 20px;
+}
+
+ .card .drink {
+    width: 80%;
+    margin-left: 20px;
+}
+.hero {
+    display: none;
+}
+ }
+}
+
+
