@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/','PageController@index',)->name('welcome');
 
 Auth::routes(['register'=>false]);
 
@@ -38,4 +40,14 @@ Route::group(['prefix' => 'types'], function(){
     Route::post('update/{group}', 'GroupController@update')->name('group.update');
     Route::post('delete/{group}', 'GroupController@destroy')->name('group.destroy');
     Route::get('show/{group}', 'GroupController@show')->name('group.show');
+ });
+
+ Route::group(['prefix' => 'products'], function(){
+    Route::get('', 'ProductController@index')->name('product.index');
+    Route::get('create', 'ProductController@create')->name('product.create');
+    Route::post('store', 'ProductController@store')->name('product.store');
+    Route::get('edit/{product}', 'ProductController@edit')->name('product.edit');
+    Route::post('update/{product}', 'ProductController@update')->name('product.update');
+    Route::post('delete/{product}', 'ProductController@destroy')->name('product.destroy');
+    Route::get('show/{product}', 'ProductController@show')->name('product.show');
  });

@@ -42,7 +42,7 @@ class GroupController extends Controller
         $group->title = $request->group_title;
         $group->priority = $request->group_priority;
         $group->save();
-        return redirect()->route('group.index');
+        return redirect()->route('group.index')->with('success_message', 'Sėkmingai sukurtas.');
 
     }
 
@@ -80,7 +80,7 @@ class GroupController extends Controller
         $group->title = $request->group_title;
         $group->priority = $request->group_priority;
         $group->save();
-        return redirect()->route('group.index');
+        return redirect()->route('group.index')->with('success_message', 'Sėkmingai atnaujintas.');
     }
 
     /**
@@ -92,7 +92,7 @@ class GroupController extends Controller
     public function destroy(Group $group)
     {
         $group->delete();
-        return redirect()->route('group.index');
+        return redirect()->route('group.index')->with('success_message', 'Sėkmingai ištrintas.');
     }
 
     public function __construct()

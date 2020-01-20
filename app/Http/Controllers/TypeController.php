@@ -40,7 +40,7 @@ class TypeController extends Controller
         $type->title = $request->type_title;
         $type->priority = $request->type_priority;
         $type->save();
-        return redirect()->route('type.index');
+        return redirect()->route('type.index')->with('success_message', 'Sėkmingai sukurtas.');
     }
 
     /**
@@ -77,7 +77,7 @@ class TypeController extends Controller
         $type->title = $request->type_title;
         $type->priority = $request->type_priority;
         $type->save();
-        return redirect()->route('type.index');
+        return redirect()->route('type.index')->with('success_message', 'Sėkmingai atnaujintas.');
     }
 
     /**
@@ -89,7 +89,7 @@ class TypeController extends Controller
     public function destroy(Type $type)
     {
         $type->delete();
-        return redirect()->route('type.index');
+        return redirect()->route('type.index')->with('success_message', 'Sėkmingai ištrintas.');
     }
     
     public function __construct()

@@ -83,10 +83,10 @@
                                                                                            Produktai
                                                                                        </a>
                                                                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                                                                           <a class="dropdown-item" href="{{ route('group.index') }}">
+                                                                                           <a class="dropdown-item" href="{{ route('product.index') }}">
                                                                                                 Produktų sąrašas
                                                                                            </a>
-                                                                                           <a class="dropdown-item" href="{{ route('group.create') }}">
+                                                                                           <a class="dropdown-item" href="{{ route('product.create') }}">
                                                                                                Sukurti produktą
                                                                                            </a>
                                                                                        </div>
@@ -143,6 +143,23 @@
             </div>
         </nav>
         <main class="py-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-9">
+                        @if(session()->has('success_message'))
+                            <div class="alert alert-success" role="alert">
+                                {{session()->get('success_message')}}
+                            </div>
+                        @endif
+                        
+                        @if(session()->has('info_message'))
+                            <div class="alert alert-info" role="alert">
+                                {{session()->get('info_message')}}
+                            </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
             @yield('content')
         </main>
     </div>
