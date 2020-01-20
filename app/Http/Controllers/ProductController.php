@@ -60,11 +60,22 @@ class ProductController extends Controller
        
     //    }
         $product = new Product;
+        $file = $request->file('product_photo');
+
+        $file_name = $file->getClientOriginalName();
+
+
+   
+      //Move Uploaded File
+      $destinationPath = public_path(). '/images/products';
+
+      $file->move($destinationPath,$file->getClientOriginalName());
+
         $product->size_title = $request->product_size_title;
         $product->desc = $request->product_desc;
         $product->price = $request->product_price;
-        $product->discount = $request->product_discount;
-        $product->photo = $request->product_photo;
+        // $product->discount = $request->product_discount;
+        $product->photo = $file_name;
         $product->priority = $request->product_priority;
         $product->desc = $request->product_desc;
         $product->type_id = $request->type_id;

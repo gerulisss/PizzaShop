@@ -4,16 +4,16 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Produkto sukūrimas</div>
+                <div class="card-header">Produkto redagavimas</div>
                 <div class="card-body">
                     <div class="form-group">
 <form method="POST" action="{{route('product.update',[$product])}}">
-    Grupe: <select name="group_id" class="form-control">
+    Grupė: <select name="group_id" class="form-control">
         @foreach ($groups as $group)
         <option value="{{$group->id}}">{{$group->title}}</option>
         @endforeach
         </select>
-        Tipa: <select name="type_id" class="form-control">
+        Tipas: <select name="type_id" class="form-control">
             @foreach ($types as $type)
             <option value="{{$type->id}}">{{$type->title}}</option>
             @endforeach
@@ -22,11 +22,13 @@
         Kaina: <input type="text" name="product_price" class="form-control" value="{{$product->price}}">
         Nuolaida: <input type="text" name="product_discount" class="form-control" value="{{$product->discount}}">
         Aprasymas: <input type="text" name="product_desc" class="form-control" value="{{$product->desc}}">
-        Nuotrauka: <input type="text" name="product_photo" class="form-control" value="{{$product->photo}}">
+        Nuotrauka: <input type="file" name="product_photo"> <img src="{{asset('/images/products/')}}/{{$product->photo}}" alt="productphoto" style="width:150px"> 
+        <br>
         Prioritetas: <input type="text" name="product_priority" class="form-control" value="{{$product->priority}}">
     @csrf
     <br>
-    <button type="submit" class="btn btn-outline-primary">EDIT</button>
+    <button type="submit" class="btn btn-outline-primary">Redaguoti</button>
+    <a class="btn btn-outline-success" href="{{route('product.index')}}">Grįžti į produktų sąrašą</a>
 </form>
                     </div>
                 </div>
