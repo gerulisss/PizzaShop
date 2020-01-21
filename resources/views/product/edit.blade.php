@@ -7,7 +7,7 @@
                 <div class="card-header">Produkto redagavimas</div>
                 <div class="card-body">
                     <div class="form-group">
-<form method="POST" action="{{route('product.update',[$product])}}">
+<form method="POST" action="{{route('product.update',[$product])}}" enctype="multipart/form-data">
     Grupė: <select name="group_id" class="form-control">
         @foreach ($groups as $group)
         <option value="{{$group->id}}">{{$group->title}}</option>
@@ -22,6 +22,7 @@
         Kaina: <input type="text" name="product_price" class="form-control" value="{{$product->price}}">
         Nuolaida: <input type="text" name="product_discount" class="form-control" value="{{$product->discount}}">
         Aprasymas: <input type="text" name="product_desc" class="form-control" value="{{$product->desc}}">
+        <br>
         Nuotrauka: <input type="file" name="product_photo"> <img src="{{asset('/images/products/')}}/{{$product->photo}}" alt="productphoto" style="width:150px"> 
         <br>
         Prioritetas: <input type="text" name="product_priority" class="form-control" value="{{$product->priority}}">
