@@ -1,4 +1,5 @@
 
+
 /*
 I wanted to go with a mobile first approach, but it actually lead to more verbose CSS in this case, so I've gone web first. Can't always force things...
 
@@ -62,6 +63,11 @@ label {
   color: $color-label;
 }
 
+.shopping-cart {
+  margin: 100px;
+  margin-top: 20px;
+}
+
 
 /* Column headers */
 .column-labels {
@@ -110,8 +116,8 @@ label {
   
   .remove-product {
     border: 0;
-    padding: 10px 15px;
-    background-color: red;
+    padding: 4px 8px;
+    background-color: #c66;
     color: #fff;
     font-family: $font-bold;
     font-size: 12px;
@@ -119,7 +125,7 @@ label {
   }
   
   .remove-product:hover {
-    background-color: red;
+    background-color: #a44;
   }
 }
 
@@ -153,28 +159,35 @@ label {
 
 .checkout {
   float: right;
-  border: 0;
-  margin-top: 20px;
-  padding: 6px 25px;
-  background-color: red;
-  color: #fff;
-  font-size: 25px;
-  border-radius: 3px;
-}
-
-.checkout:hover {
-  background-color: red;
-}
-
-.shopping-cart {
-  margin-top: 100px;
-}
-
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: red;
+    padding: 14px 30px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+    margin-top: 10px;
+  }
+  
+  .checkout span {
+    position: relative; 
+    z-index: 1;
+  }
 
 /* Make adjustments for tablet */
 @media screen and (max-width: 650px) {
   
   .shopping-cart {
+    margin: 20px;
+    margin-top: 100px;
     padding-top: 20px;
     border-top: 1px solid $color-border;
   }
@@ -226,11 +239,7 @@ label {
 
 
 /* Make more adjustments for phone */
-@media screen and (max-width: 1100px) {
-
-  .shopping-cart {
-    margin-top: 100px;
-  }
+@media screen and (max-width: 350px) {
   
   .product-removal {
     float: right;

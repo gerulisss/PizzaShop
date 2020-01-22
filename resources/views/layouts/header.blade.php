@@ -30,7 +30,7 @@
                                    <a class="headers_links" href="#about">About</a>
                                    <a class="headers_links" href="#products">Products</a>
                                    <a class="headers_links" href="#contact">Contact</a>
-                                   <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                                   <a style="text-decoration:none;" href="{{route('cart')}}"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
                                           
                            </nav>
                        </div>
