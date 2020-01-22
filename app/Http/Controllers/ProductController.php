@@ -60,16 +60,11 @@ class ProductController extends Controller
        
     //    }
         $product = new Product;
-        $file = $request->file('product_photo');
 
-        $file_name = $file->getClientOriginalName();
-
-
-   
-      //Move Uploaded File
-      $destinationPath = public_path(). '/images/products';
-
-      $file->move($destinationPath,$file->getClientOriginalName());
+        
+        $file = $request->file('product_photo') ?? false;
+        $file_name = basename($file->getClientOriginalName());
+        $file->move(public_path('/images/products'), $file_name);
 
         $product->size_title = $request->product_size_title;
         $product->desc = $request->product_desc;
@@ -117,22 +112,20 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        $file = $request->file('product_photo');
 
-        $file_name = $file->getClientOriginalName();
+    $file = $request->file('product_photo') ?? false;
 
-
-   
-      //Move Uploaded File
-      $destinationPath = public_path(). '/images/products';
-
-      $file->move($destinationPath,$file->getClientOriginalName());
+    if ($file) {
+        $file_name = basename($file->getClientOriginalName());
+        $file->move(public_path('/images/products'), $file_name);
+        // unlink(public_path('images/products/' . $product->photo));
+        $product->photo = $file_name;
+    }
 
         $product->size_title = $request->product_size_title;
         $product->desc = $request->product_desc;
         $product->price = $request->product_price;
         $product->discount = $request->product_discount;
-        $product->photo = $file_name;
         $product->priority = $request->product_priority;
         $product->desc = $request->product_desc;
         $product->type_id = $request->type_id;
