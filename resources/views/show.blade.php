@@ -14,7 +14,7 @@
         </div>
         <div class="product_info">
             <div class="product_description">
-                <h1>{{$product->group->title}}</h1>
+                <h2>{{$product->group->title}}</h2>
                 <h2>{{$product->price}} €</h2>
                 <h4>{{$product->desc}}</h4>
           <div class="btn" style="width: 200px; float:right"><span>Į krepšelį</span></div>

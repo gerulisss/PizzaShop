@@ -2,7 +2,7 @@
     <div class="mobile">
         <div class="row">
            <div class="logo2">
-               <img src="./images/logo.png" alt="portfolio"><a href="#"></a>
+            <a href="{{route('welcome')}}"><img src={{asset('images/logo.png')}} alt="Logo"></a>
            </div>
            <nav class="nav-right">
                                <i class="fa fa-bars" aria-hidden="true" onclick="openNav()"></i>
