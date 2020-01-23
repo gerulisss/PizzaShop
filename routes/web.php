@@ -17,6 +17,9 @@
 
 Route::get('/','PageController@index',)->name('welcome');
 
+
+Route::get('/show','PageController@show',)->name('show');
+
 Route::get('/cart','CartController@index',)->name('cart');
 
 Auth::routes(['register'=>false]);

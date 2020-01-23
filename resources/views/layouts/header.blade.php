@@ -8,11 +8,11 @@
                                <i class="fa fa-bars" aria-hidden="true" onclick="openNav()"></i>
                <div id="mySidenav" class="sidenav">
                <a href="javascript:void(0)" class="closesbtn" onclick="closeNav()">&times;</a>
-               <a href="#">Home</a>
+               <a href="{{route('welcome')}}">Home</a>
                <a href="#">About</a>
                <a href="#">Products</a>
                <a href="#">Contact</a>
-               <a href="#">Cart</a>
+               <a href="{{route('cart')}}">Cart</a>
        </div>
    </div>
    </div>
@@ -23,7 +23,7 @@
                    <nav class="navbar">
                        <div class="row">
                            <div class="logo">
-                               <img src="./images/logo.png" alt="portfolio"><a href="#"></a>
+                            <a href="{{route('welcome')}}"><img src={{asset('images/logo.png')}} alt="Logo"></a>
                            </div>
                            <nav class="nav-right">
                                    <a class="headers_links" href="#home">Home</a>
