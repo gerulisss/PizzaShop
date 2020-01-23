@@ -40,7 +40,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     left: 0;
     right: 0;
     z-index: 9;
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 5px 5px 8px #888888;
 }
 .navbar {
     display: inline-block;
