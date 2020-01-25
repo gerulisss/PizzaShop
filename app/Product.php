@@ -16,8 +16,4 @@ class Product extends Model
         return $this->belongsTo('App\Type', 'type_id', 'id');
     }
 
-        // public function getShortDescriptionAttribute()
-    // {
-    //     return Str::words($this->attributes['description'], 3);
-    // }
 }

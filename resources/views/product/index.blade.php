@@ -27,7 +27,7 @@
         <tr>
           <td>{{$product->id}}</td>
           <td>{{ $product->size_title }}</td>
-          <td>{{ $product->desc}}</td>
+          <td>{!! \Illuminate\Support\Str::words($product->desc, 3,'....')  !!}</td>
           <td>{{ $product->price}}</td>
           <td>{{ $product->discount}}</td>
           <td>{{$product->photo}}</td>
@@ -44,8 +44,8 @@
       </td>
         </tr>
         @endforeach
+        {{ $products->links() }}
      </tbody>
-     {{ $products->links() }}
   </table>
 </div>
 @endsection

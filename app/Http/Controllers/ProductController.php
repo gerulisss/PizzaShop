@@ -17,10 +17,11 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        $products = Product::all()->sortBy('priority');
+        $products = Product::all();
+        // ->sortBy('priority')
         $groups = Group::all();
         $types = Type::all();
-        return view('product.index', ['products' => Product::paginate(10) ,'groups' => $groups, 'types' => $types]);
+        return view('product.index', ['products' => Product::paginate(5) ,'groups' => $groups, 'types' => $types]);
     }
 
     /**
