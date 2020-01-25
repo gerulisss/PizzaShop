@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Group;
+use App\Type;
 
 class GroupController extends Controller
 {
@@ -12,10 +13,11 @@ class GroupController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $groups = Group::all();
-        return view('group.index', ['groups' => $groups]);
+        $types = Type::all();
+        return view('group.index', ['groups' => $groups, 'types' => $types]);
 
     }
 
@@ -26,7 +28,9 @@ class GroupController extends Controller
      */
     public function create()
     {
-        return view('group.create');
+        $groups = Group::all();
+        $types = Type::all();
+        return view('group.create', ['groups' => $groups, 'types' => $types]);
 
     }
 
@@ -41,6 +45,7 @@ class GroupController extends Controller
         $group = new Group;
         $group->title = $request->group_title;
         $group->priority = $request->group_priority;
+        $group->type_id = $request->type_id;
         $group->save();
         return redirect()->route('group.index')->with('success_message', 'Sėkmingai sukurtas.');
 
@@ -65,7 +70,9 @@ class GroupController extends Controller
      */
     public function edit(Group $group)
     {
-        return view('group.edit', ['group' => $group]);
+        $groups = Group::all();
+        $types = Type::all();
+        return view('group.edit', ['group' => $group, 'types' => $types]);
     }
 
     /**
@@ -79,6 +86,7 @@ class GroupController extends Controller
     {
         $group->title = $request->group_title;
         $group->priority = $request->group_priority;
+        $group->type_id = $request->type_id;
         $group->save();
         return redirect()->route('group.index')->with('success_message', 'Sėkmingai atnaujintas.');
     }

@@ -10,14 +10,9 @@
 <form method="POST" action="{{route('product.update',[$product])}}" enctype="multipart/form-data">
     Grupė: <select name="group_id" class="form-control">
         @foreach ($groups as $group)
-        <option value="{{$group->id}}">{{$group->title}}</option>
+        <option value="{{$group->id}}" @if($group->id == $product->group_id) selected @endif>{{$group->title}}</option>
         @endforeach
         </select>
-        Tipas: <select name="type_id" class="form-control">
-            @foreach ($types as $type)
-            <option value="{{$type->id}}">{{$type->title}}</option>
-            @endforeach
-            </select>
         Dydis: <input type="text" name="product_size_title" class="form-control" value="{{$product->size_title}}">
         Kaina: <input type="text" name="product_price" class="form-control" value="{{$product->price}}">
         Nuolaida: <input type="text" name="product_discount" class="form-control" value="{{$product->discount}}">

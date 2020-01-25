@@ -73,7 +73,6 @@ class ProductController extends Controller
         $product->photo = $file_name;
         $product->priority = $request->product_priority;
         $product->desc = $request->product_desc;
-        $product->type_id = $request->type_id;
         $product->group_id = $request->group_id;
         $product->save();
         return redirect()->route('product.index')->with('success_message', 'Sėkmingai sukurtas.');
@@ -128,7 +127,6 @@ class ProductController extends Controller
         $product->discount = $request->product_discount;
         $product->priority = $request->product_priority;
         $product->desc = $request->product_desc;
-        $product->type_id = $request->type_id;
         $product->group_id = $request->group_id;
         $product->save();
         return redirect()->route('product.index')->with('success_message', 'Sėkmingai atnaujintas.');

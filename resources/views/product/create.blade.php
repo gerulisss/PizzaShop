@@ -15,11 +15,6 @@
         <option value="{{$group->id}}">{{$group->title}}</option>
         @endforeach
         </select>
-        Tipas: <select name="type_id" class="form-control">
-            @foreach ($types as $type)
-            <option value="{{$type->id}}">{{$type->title}}</option>
-            @endforeach
-            </select>
         Dydis: <input type="text" name="product_size_title" class="form-control">
         Kaina: <input type="text" name="product_price" class="form-control">
         Nuolaida: <input type="text" name="product_discount" class="form-control">
