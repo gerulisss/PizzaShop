@@ -10,7 +10,6 @@
      <thead>
         <tr>
            <th>Grupė</th>
-           <th>Pavadinimas</th>
            <th>Dydis</th>
            <th>Kaina</th>
            <th>Nuolaida</th>
@@ -23,7 +22,6 @@
      <tbody>
         @foreach($products as $product)
         <tr>
-          <td>{{$product->type->title}}</td>
           <td>{{$product->group->title}}</td>
           <td>{{ $product->size_title }}</td>
           <td>{{ $product->price }}</td>
@@ -31,7 +29,6 @@
           <td>{{ $product->desc}}</td>
           <td>{{ $product->priority }}</td>
           <td>{{$product->created_at}}</td>
-          {{-- <td>{{$product->type->id}}</td> --}}
           <td>
           <form method="POST" action="{{route('product.destroy', [$product])}}">
             <a style="text-decoration:none;" href="{{route('product.edit',[$product])}}"><button type="button" class="btn btn-outline-primary btn-sm">Redaguoti</button></a>

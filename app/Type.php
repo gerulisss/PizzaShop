@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Type extends Model
 {
-    public function group()
+    public function groups()
     {
-    return $this->belongsTo('App\Group');
+        return $this->hasMany('App\Group','type_id', 'id');
     }
 
     public function type()

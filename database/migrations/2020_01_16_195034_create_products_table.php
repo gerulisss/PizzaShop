@@ -21,9 +21,7 @@ class CreateProductsTable extends Migration
             $table->decimal('discount', 5, 2)->nullable();
             $table->string('photo', 255);
             $table->smallInteger('priority');
-            $table->unsignedBigInteger('type_id');
             $table->unsignedBigInteger('group_id');
-            $table->foreign('type_id')->references('id')->on('types');
             $table->foreign('group_id')->references('id')->on('groups');
             $table->timestamps();
         });

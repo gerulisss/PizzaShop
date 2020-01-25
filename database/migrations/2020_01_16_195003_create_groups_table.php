@@ -17,6 +17,8 @@ class CreateGroupsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title', 255);
             $table->smallInteger('priority');
+            $table->unsignedBigInteger('type_id');
+            $table->foreign('type_id')->references('id')->on('types');
             $table->timestamps();
         });
     }

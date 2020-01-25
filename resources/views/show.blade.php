@@ -17,7 +17,7 @@
                 <h2>{{$product->group->title}}</h2>
                 <h2>{{$product->price}} €</h2>
                 <h4>{{$product->desc}}</h4>
-          <div class="btn" style="width: 200px; float:right"><span>Į krepšelį</span></div>
+          <div class="btn" style="width: 150px; float: left;"><span>Į krepšelį</span></div>
           </div>
           </div>
           </div>

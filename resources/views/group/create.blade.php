@@ -12,6 +12,11 @@
     <br>
     Pavadinimas: <input type="text" name="group_title" class="form-control">
     Prioritetas: <input type="text" name="group_priority" class="form-control">
+    Tipas: <select name="type_id" class="form-control">
+        @foreach ($types as $type)
+        <option value="{{$type->id}}">{{$type->title}}</option>
+        @endforeach
+        </select>
     <br>
     @csrf
     <button type="submit" class="btn btn-outline-primary">Sukurti</button>
