@@ -20,8 +20,7 @@ class ProductController extends Controller
         $products = Product::all()->sortBy('priority');
         $groups = Group::all();
         $types = Type::all();
-        return view('product.index', ['products' => $products,'groups' => $groups, 'types' => $types]);
-        // 'products' => Product::paginate(10) 
+        return view('product.index', ['products' => Product::paginate(10) ,'groups' => $groups, 'types' => $types]);
     }
 
     /**

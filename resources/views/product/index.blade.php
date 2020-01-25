@@ -45,7 +45,7 @@
         </tr>
         @endforeach
      </tbody>
+     {{ $products->links() }}
   </table>
 </div>
-{{-- {{ $products->links() }} --}}
 @endsection
