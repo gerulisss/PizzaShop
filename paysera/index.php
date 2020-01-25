@@ -25,9 +25,9 @@ try {
     $self_url = get_self_url();
 
     $request = WebToPay::redirectToPayment(array(
-        'projectid'     => 161630,
-        'sign_password' => '22af21545073a9bde52d7be5cd749faa',
-        'orderid'       => 'Vezuvijaus 77',
+        'projectid'     => 161878,
+        'sign_password' => '05d0a348b55f087fd24e61004a977853',
+        'orderid'       => 'Vezuvijaus 12',
         'amount'        => 1000,
         'currency'      => 'EUR',
         'country'       => 'LT',
