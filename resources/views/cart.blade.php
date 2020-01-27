@@ -6,16 +6,17 @@
 <div class="shopping-cart">
 
   <div class="column-labels">
-    <label class="product-image">Image</label>
-    <label class="product-details">Product</label>
-    <label class="product-price">Price</label>
-    <label class="product-quantity">Quantity</label>
-    <label class="product-removal">Remove</label>
-    <label class="product-line-price">Total</label>
+    <label class="product-image">Nuotrauka</label>
+    <label class="product-details">Produktas</label>
+    <label class="product-price">Kaina</label>
+    <label class="product-quantity">Kiekis</label>
+    <label class="product-removal">Ištrinti</label>
+    <label class="product-line-price">Kaina su nuolaida</label>
   </div>
 
   @if(isset($shopcart))
 <br><br>
+@if(count($shopcart))
 @foreach ($shopcart as $product)
   <div class="product">
     <div class="product-image">
@@ -36,6 +37,9 @@
   </div>
 
   @endforeach
+  @else
+Krepšelis yra tuščias
+@endif
   @endif
 </div>
 @extends('layouts.footer')

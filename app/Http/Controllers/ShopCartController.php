@@ -31,8 +31,10 @@ class ShopCartController extends Controller
         if ($shopcart === null) {
             $shopcart = collect(); 
         }
+
         Session::forget('shopcart', $shopcart);
 
         return redirect()->back();
     }
+
 }
