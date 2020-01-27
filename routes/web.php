@@ -20,7 +20,7 @@ Route::get('/','PageController@index',)->name('welcome');
 
 Route::get('/show','PageController@show',)->name('show');
 
-Route::get('/cart','CartController@index',)->name('cart');
+Route::get('/cart','ShopCartController@index',)->name('cart');
 
 Auth::routes(['register'=>false]);
 
