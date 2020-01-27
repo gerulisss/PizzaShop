@@ -14,7 +14,7 @@
                     <h3>{{$product->group->title}}</h3> 
                     <p>{{$product->desc}}</p>
                     <h3>{{$product->price}} €</h3> 
-                        <button class="btn"><span>į krepšelį</span></button>
+                    <a style="text-decoration:none;" href="{{route('show',['id'=>$product])}}"><button class="btn"><span>Pasirinkti</span></button></a>
                     </div>
                     
                 @endforeach

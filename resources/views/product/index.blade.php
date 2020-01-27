@@ -6,7 +6,7 @@
       <div class="col-md-12">
           <div class="card">
               <div class="card-header">Produktų sąrašas
-                      <a class="btn btn-outline-primary btn-sm" href="{{ route('product.create') }}"> Create New Product</a>
+                      <a style="float:right;" class="btn btn-outline-primary btn-sm" href="{{ route('product.create') }}"> Create New Product</a>
                   </div>
 
                   <table class="table">
@@ -34,7 +34,7 @@
                         <td>{!! \Illuminate\Support\Str::words($product->desc, 3,'....')  !!}</td>
                         <td>{{ $product->price}}</td>
                         <td>{{ $product->discount}}</td>
-                        <td>{{$product->photo}}</td>
+                        <td><img src="{{asset('/images/products/')}}/{{$product->photo}}" width="100px;"></td>
                         <td>{{$product->priority}}</td>
                         <td>{{$product->group->id}}</td>
                         <td>{{$product->group->type->id}}</td>

@@ -3,18 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
+use App\Product;
 
 class ShopCartController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function add(Product $product)
     {
+        $shopcart = Session::get('shopcart', null);
 
-        return view('cart');
+        if ($shopcart === null) {
+            $shopcart = collect(); 
+        }
 
+        $shopcart->add($product);
+
+        Session::put('shopcart', $shopcart);
+
+        return redirect()->back();
     }
 }

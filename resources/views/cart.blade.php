@@ -3,7 +3,7 @@
 @include('layouts.slides')
 <body>
 
-<div class="shopping-cart">
+{{-- <div class="shopping-cart">
 
   <div class="column-labels">
     <label class="product-image">Image</label>
@@ -59,10 +59,10 @@
       <label>Nuolaida</label>
       <div class="totals-value" id="cart-tax">3.60</div>
     </div>
-    {{-- <div class="totals-item">
+    <div class="totals-item">
       <label>Pristatymas</label>
       <div class="totals-value" id="cart-shipping">15.00</div>
-    </div> --}}
+    </div>
     <div class="totals-item totals-item-total">
       <label>Galutinė kaina</label>
       <div class="totals-value" id="cart-total">90.57</div>
@@ -71,6 +71,16 @@
       
       <button class="checkout">Pirkti</button>
 
+</div> --}}
+<div class="container">
+@if(isset($shopcart))
+<br><br>
+@foreach ($shopcart as $product)
+    Produktas: {{$product->group->title}} - Kiekis: {{$product->count}} - ID: {{$product->id}}<br>
+@endforeach
+
+
+@endif
 </div>
 @extends('layouts.footer')
 </body>
