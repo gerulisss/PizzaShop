@@ -12,6 +12,5 @@
          <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     </head>
-    <script src="{{ asset('/js/carousel.js') }}" defer></script>
-    <script src="{{ asset('/js/sidenav.js') }}" defer></script>
+    <script src="{{ asset('/js/main.js') }}" defer></script>
 </html>
