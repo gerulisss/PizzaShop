@@ -30,7 +30,7 @@
       {{$product->count}}
     </div>
     <div class="product-removal">
-        <button class="btn"><span>ištrinti</span></button>
+      <a style="text-decoration: none;" href="{{route('remove', [$product])}}"><div class="btn"><span>Ištrinti</span></div></a>
     </div>
     <div class="product-line-price">{{$product->price}}</div>
   </div>

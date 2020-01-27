@@ -22,4 +22,17 @@ class ShopCartController extends Controller
 
         return redirect()->back();
     }
+
+    public function remove(Product $product)
+    {
+
+        $shopcart = Session::get('shopcart', null);
+
+        if ($shopcart === null) {
+            $shopcart = collect(); 
+        }
+        Session::forget('shopcart', $shopcart);
+
+        return redirect()->back();
+    }
 }

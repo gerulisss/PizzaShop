@@ -24,6 +24,8 @@ Route::get('/cart','CartController@index',)->name('cart');
 
 Route::get('add-product/{product}', 'ShopCartController@add')->name('add');
 
+Route::get('remove-product/{product}', 'ShopCartController@remove')->name('remove');
+
 Auth::routes(['register'=>false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
