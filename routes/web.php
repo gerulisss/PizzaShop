@@ -60,3 +60,12 @@ Route::group(['prefix' => 'types'], function(){
     Route::post('delete/{product}', 'ProductController@destroy')->name('product.destroy');
     Route::get('show/{product}', 'ProductController@show')->name('product.show');
  });
+
+
+      Route::get('paysera-test', 'PayseraController@test')->name('test');
+      Route::post('pay', 'PayseraController@pay')->name('pay');
+      Route::get('ok', 'PayseraController@ok')->name('ok');
+
+      Route::match(['GET','POST'], 'accept', 'PayseraController@accept')->name('accept');
+      Route::match(['GET','POST'],'cancel', 'PayseraController@cancel')->name('cancel');
+      Route::match(['GET','POST'], 'callback', 'PayseraController@callback')->name('callback');

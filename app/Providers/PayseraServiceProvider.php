@@ -15,7 +15,15 @@ class PayseraServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(Paysera::class, function () {
-            return new Paysera ();
+            $config = [
+            'projectid'     => 161878,
+            'sign_password' => '05d0a348b55f087fd24e61004a977853',
+            'accepturl'     => route('accept'),
+            'cancelurl'     => route('cancel'),
+            'callbackurl'   => route('callback'),
+            ];
+
+            return new Paysera($config);
         });
     }
 
