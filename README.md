@@ -4,7 +4,7 @@
 [![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/gerulisss/PizzaShop/blob/master/License.md)
 
 # PizzaShop
-BIT užduotis: sukurti picos užsakymo sistemą, integruojant PaySera mokėjimų sistema.
+BIT užduotis: sukurti picos užsakymo sistemą su integruota PaySera mokėjimų sistema.
 
 # Naudojamos technologijos
 ((FRONT-END) - HTML, CSS, JS), ((BACK-END) - PHP, LARAVEL 6).
