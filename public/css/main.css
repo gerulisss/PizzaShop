@@ -161,7 +161,7 @@ label {
 
 .shopping-cart {
   margin: 100px;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 /* Column headers */
@@ -599,7 +599,7 @@ h3, p {
 }
 
 .container {
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 @media (max-width: 1300px) {
