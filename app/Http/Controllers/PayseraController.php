@@ -17,7 +17,7 @@ class PayseraController extends Controller
     public function pay(Request $request, Paysera $paysera)
     {
 
-        $paysera->pay($request->email, $request->amount); //Cia Laravelis "nuluzta";
+        $paysera->pay($request->email, $request->amount); //Laravel lūžimas
 
     }
 
@@ -30,15 +30,14 @@ class PayseraController extends Controller
 
     public function accept(Paysera $paysera)
     {
-        $info = $paysera->getPayment(); // visa info
+        $info = $paysera->getPayment();
         return redirect()->route('ok');
-        // return 'BBZ';
     }
 
 
     public function callback(Paysera $paysera)
     {
-        $info = $paysera->getPayment(); // visa info
+        $info = $paysera->getPayment();
         return 'OK';
     }
 
