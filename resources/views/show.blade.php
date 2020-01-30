@@ -16,11 +16,6 @@
                 <h2>{{$product->price}} €</h2>
                 <h4>{{$product->desc}}</h4>
                 <a style="text-decoration: none;" href="{{route('add', [$product])}}"><div class="btn" style="width: 150px; float: left;"><span>Į krepšelį</span></div></a>
-                @if(session()->has('success_message'))
-        <div class="alert alert-success" role="alert">
-            {{session()->get('success_message')}}
-        </div>
-        @endif
             </div>
           </div>
           </div>
