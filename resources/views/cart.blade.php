@@ -31,7 +31,8 @@
       {{$product->count}}
     </div>
     <div class="product-removal">
-      <a style="text-decoration: none;" href="{{route('remove', [$product])}}"><div class="btn"><span>Ištrinti</span></div></a>
+      {{-- <a style="text-decoration: none;" href="{{route('remove', [$product])}}"><div class="btn"><span>Ištrinti</span></div></a> --}}
+      <span class="remove-product" data-product-id="{{$product->id}}">Delete</span>
     </div>
     <div class="product-line-price">{{$product->price}}</div>
   </div>

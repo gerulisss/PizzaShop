@@ -31,8 +31,11 @@
                                    <a class="headers_links" href="#products">Products</a>
                                    <a class="headers_links" href="#contact">Contact</a>
                                    <a style="text-decoration:none;" href="{{route('cart')}}"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
-                                   <script>var getCartUrl="{{route('get-cart')}}";</script>
-                                   <a href="{{route('cart')}}" class="mygtukas" id="top-cart">
+                                   <script>
+                                   var getCartUrl="{{route('get-cart')}}";
+                                   var removeCartUrl="{{route('remove-cart')}}";
+                                    </script>
+                                   <a class="mygtukas" id="top-cart">
                                     @if(session()->has('success_message'))
                                     <div class="alert alert-success" role="alert">
                                         {{session()->get('success_message')}}

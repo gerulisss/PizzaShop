@@ -23,8 +23,9 @@ Route::get('/show','PageController@show',)->name('show');
 Route::get('/cart','CartController@index',)->name('cart');
 
 Route::get('add-product/{product}', 'ShopCartController@add')->name('add');
+Route::post('remove-cart', 'ShopCartController@removeCart')->name('remove-cart');
 
-Route::get('remove-product/{product}', 'ShopCartController@remove')->name('remove');
+// Route::get('remove-product/{product}', 'ShopCartController@remove')->name('remove');
 
 Route::post('get-cart', 'ShopCartController@getCart')->name('get-cart');
 

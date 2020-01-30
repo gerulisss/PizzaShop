@@ -27,5 +27,6 @@ class CartController extends Controller
         });
         
         return view('cart',['shopcart' => $shopcart]);
+        
     }
 }

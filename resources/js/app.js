@@ -54,4 +54,23 @@ console.log('aa');
         $('#top-cart').empty();
     });
 
+    
+
+    $(document).on("click", ".remove-product", function(){
+      var id = $(this).data('productId');
+      axios.post(removeCartUrl, {
+        id : id
+      })
+      .then(function (response) {
+        console.log(response);
+        $('#top-cart').empty().html(response.data.html);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+
+      console.log(id);
+  });
+
 });
