@@ -32,7 +32,7 @@
                                    <a class="headers_links" href="#contact">Contact</a>
                                    <a style="text-decoration:none;" href="{{route('cart')}}"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
                                    <script>var getCartUrl="{{route('get-cart')}}";</script>
-                                   <a href="#" class="mygtukas" id="top-cart">
+                                   <a href="{{route('cart')}}" class="mygtukas" id="top-cart">
                                    </a>
                            </nav>
                        </div>
