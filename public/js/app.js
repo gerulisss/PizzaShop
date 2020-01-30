@@ -49550,6 +49550,20 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 var app = new Vue({
   el: '#app'
 });
+$(document).ready(function () {
+  $(document).on("mouseenter", "#top-cart", function () {
+    axios.post(getCartUrl, {}).then(function (response) {
+      console.log(response);
+      $('#top-cart').empty().html(response.data.html);
+    })["catch"](function (error) {
+      console.log(error);
+    });
+    console.log('aa');
+  });
+  $(document).on("mouseleave", "#top-cart", function () {
+    $('#top-cart').empty();
+  });
+});
 
 /***/ }),
 

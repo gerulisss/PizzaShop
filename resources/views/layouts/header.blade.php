@@ -31,8 +31,25 @@
                                    <a class="headers_links" href="#products">Products</a>
                                    <a class="headers_links" href="#contact">Contact</a>
                                    <a style="text-decoration:none;" href="{{route('cart')}}"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
-                                          
+                                   <script>var getCartUrl="{{route('get-cart')}}";</script>
+                                   <a href="#" class="mygtukas" id="top-cart">
+                                   </a>
                            </nav>
                        </div>
                    </nav> 
                </header>
+
+               <style>
+                   .mygtukas {
+	background-color: red;
+	color: white;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+	display: inline-block;
+	text-decoration: none;
+	border: none;
+	text-align: center;
+	}
+                   </style>

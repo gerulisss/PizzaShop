@@ -21,6 +21,7 @@ class CartController extends Controller
         $shopcart = Session::get('shopcart', collect());
         
         $counts = $shopcart->countBy('id')->toArray();
+        $c = $shopcart->unique()->values();
         $shopcart = $shopcart->unique('id')->each(function ($item) use ($counts) {
             $item->count = $counts[$item->id];
         });

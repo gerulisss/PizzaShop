@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Session;
 use App\Product;
+use App\Group;
+use Response;
+use View;
 
 class ShopCartController extends Controller
 {
@@ -20,7 +23,7 @@ class ShopCartController extends Controller
 
         Session::put('shopcart', $shopcart);
 
-        return redirect()->back();
+        return redirect()->back()->with('success_message', 'Produktas idetas i krepseli!');
     }
 
     public function remove(Product $product)
@@ -35,6 +38,30 @@ class ShopCartController extends Controller
         Session::forget('shopcart', $shopcart);
 
         return redirect()->back();
+    }
+
+    public function getCart()
+    {
+        $groups = Group::all();
+
+        $shopcart = Session::get('shopcart', collect());
+
+        $counts = $shopcart->countBy('id')->toArray();
+
+        $shopcart = $shopcart->unique('id')->each(function ($item) use ($counts) {
+            $item->count = $counts[$item->id];
+        });
+
+        $html = View::make('top_cart')->with(['shopcart' => $shopcart])->render();
+
+        return Response::json([
+            'html' => $html,
+
+        ], 
+        200);
+
+
+
     }
 
 }
