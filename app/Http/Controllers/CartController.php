@@ -24,8 +24,8 @@ class CartController extends Controller
             $item->count = $counts[$item->id];
         });
 
-        $sum = $shopcart->pluck('price')->sum();
         
+        $sum = $shopcart->pluck('price')->sum();
         return view('cart',['shopcart' => $shopcart, 'sum' => $sum]);
         
     }

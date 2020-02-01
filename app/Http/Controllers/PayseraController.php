@@ -41,7 +41,7 @@ class PayseraController extends Controller
             $client->address = 'No';	
             $client->comment = 'Np';
             $client->delivery = 1;	
-            $client->pickup_id = rand(1,5);
+            // $client->pickup_id = rand(1,5);
     
             $client->save();
     
@@ -55,7 +55,7 @@ class PayseraController extends Controller
     
             $order->save();
     
-            $shopcart = Session::get('cart', collect());
+            $shopcart = Session::get('shopcart', collect());
     
             foreach($shopcart as $product) {
                 $orderProduct = new OrderProduct;

@@ -11,7 +11,7 @@
     <label class="product-price">Kaina</label>
     <label class="product-quantity">Kiekis</label>
     <label class="product-removal">Ištrinti</label>
-    <label class="product-line-price">Bendra kaina</label>
+    <label class="product-line-price">kaina</label>
   </div>
 
   @if(isset($shopcart))
@@ -34,10 +34,10 @@
       {{-- <a style="text-decoration: none;" href="{{route('remove', [$product])}}"><div class="btn"><span>Ištrinti</span></div></a> --}}
       <span class="remove-product" data-product-id="{{$product->id}}">Delete</span>
     </div>
-    <div class="product-line-price">{{$sum}}</div>
+    <div class="product-line-price">{{$product->price}}</div>
   </div>
-
   @endforeach
+ <div style="float:right;">Bendra suma: {{$sum}} €</div>
   @else
 Krepšelis yra tuščias
 @endif
