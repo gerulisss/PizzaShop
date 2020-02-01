@@ -8,8 +8,8 @@
   Paštas:<br>
   <input type="email" name="email">
   <br>
-  Pinigų kiekis:<br>
-  <input type="text" name="amount">
+  <br>
+  Pinigų kiekis: <input style="border:none; outline:none; width:14px;" type="text" name="amount" value={{$sum}} readonly>
   <br><br>
   <input type="submit" value="Mokėti">
   @csrf

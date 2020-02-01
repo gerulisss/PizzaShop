@@ -15,8 +15,6 @@ class CartController extends Controller
      */
     public function index()
     {
-
-        // return view('cart');
         
         $shopcart = Session::get('shopcart', collect());
         
@@ -25,8 +23,10 @@ class CartController extends Controller
         $shopcart = $shopcart->unique('id')->each(function ($item) use ($counts) {
             $item->count = $counts[$item->id];
         });
+
+        $sum = $shopcart->pluck('price')->sum();
         
-        return view('cart',['shopcart' => $shopcart]);
+        return view('cart',['shopcart' => $shopcart, 'sum' => $sum]);
         
     }
 }
