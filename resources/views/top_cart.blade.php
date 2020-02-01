@@ -5,6 +5,6 @@
 <span class="remove-product" data-product-id="{{$product->id}}">Delete</span> {{$product->group->title}} - Kiekis: {{$product->count}}<br>
 @endforeach
 @else 
-Krepselis yra tuscias
+KrepŠelis yra tuščias
 @endif 
 @endif

@@ -23,7 +23,7 @@ class ShopCartController extends Controller
 
         Session::put('shopcart', $shopcart);
 
-        return redirect()->back()->with('success_message', 'Produktas idetas i krepseli!');
+        return redirect()->back()->with('success_message', 'Produktas idėtas į krepšelį!');
     }
 
     //Viska istrina is sesijos
