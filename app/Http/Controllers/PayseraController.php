@@ -41,7 +41,7 @@ class PayseraController extends Controller
             $client->address = 'No';	
             $client->comment = 'Np';
             $client->delivery = 1;	
-            // $client->pickup_id = rand(1,5);
+            $client->pickup_id = rand(1,5);
     
             $client->save();
     
