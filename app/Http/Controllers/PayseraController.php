@@ -87,7 +87,7 @@ class PayseraController extends Controller
             $order->status = 1;
             $order->save();
 
-            Session::forget('cart');
+            Session::forget('shopcart');
 
         }
         
