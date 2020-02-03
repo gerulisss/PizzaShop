@@ -46,9 +46,9 @@ class ShopCartController extends Controller
         $groups = Group::all();
 
         $shopcart = Session::get('shopcart', collect());
-        $sum = $shopcart->pluck('price')->sum();
         $counts = $shopcart->countBy('id')->toArray();
-
+        
+        $sum = $shopcart->sum('price');
         $shopcart = $shopcart->unique('id')->each(function ($item) use ($counts) {
             $item->count = $counts[$item->id];
         });

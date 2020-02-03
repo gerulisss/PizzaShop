@@ -64,8 +64,12 @@ Route::group(['prefix' => 'types'], function(){
     Route::get('show/{product}', 'ProductController@show')->name('product.show');
  });
 
+ Route::group(['prefix' => 'orders'], function(){
+   Route::get('', 'OrderController@index')->name('order.index');
+});
 
-      Route::get('paysera-test', 'PayseraController@test')->name('test');
+
+      Route::get('apmokejimas', 'PayseraController@test')->name('apmokejimas');
       Route::post('pay', 'PayseraController@pay')->name('pay');
       Route::get('ok', 'PayseraController@ok')->name('ok');
 

@@ -38,7 +38,7 @@
   </div>
   @endforeach
  <div style="float:right;">Bendra suma: {{$sum}} €</div>
- <a style="text-decoration:none;float:right; margin-top: 20px;" class="btn"  href="{{route('test')}}"><span>Pirkti</span></a>
+ <a style="text-decoration:none;float:right; margin-top: 20px;" class="btn"  href="{{route('apmokejimas')}}"><span>Pirkti</span></a>
   @else
 Krepšelis yra tuščias
 @endif
