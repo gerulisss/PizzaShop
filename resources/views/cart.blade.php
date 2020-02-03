@@ -20,7 +20,7 @@
 @foreach ($shopcart as $product)
   <div class="product">
     <div class="product-image">
-        <a href="#"><img src="{{asset('/images/products/')}}/{{$product->photo}}" width="150px;"></a>
+      <a style="text-decoration:none;" href="{{route('show',['id'=>$product])}}"><img src="{{asset('/images/products/')}}/{{$product->photo}}" width="150px;"></a>
     </div>
     <div class="product-details">
       <div class="product-title">{{$product->group->title}}</div>
@@ -32,12 +32,13 @@
     </div>
     <div class="product-removal">
       {{-- <a style="text-decoration: none;" href="{{route('remove', [$product])}}"><div class="btn"><span>Ištrinti</span></div></a> --}}
-      <span class="remove-product" data-product-id="{{$product->id}}">Delete</span>
+      <span class="remove-product" data-product-id="{{$product->id}}">Ištrinti</span>
     </div>
     <div class="product-line-price">{{$product->price}}</div>
   </div>
   @endforeach
  <div style="float:right;">Bendra suma: {{$sum}} €</div>
+ <a style="text-decoration:none;float:right; margin-top: 20px;" class="btn"  href="{{route('test')}}"><span>Pirkti</span></a>
   @else
 Krepšelis yra tuščias
 @endif

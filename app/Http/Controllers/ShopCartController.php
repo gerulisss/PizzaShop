@@ -46,14 +46,14 @@ class ShopCartController extends Controller
         $groups = Group::all();
 
         $shopcart = Session::get('shopcart', collect());
-
+        $sum = $shopcart->pluck('price')->sum();
         $counts = $shopcart->countBy('id')->toArray();
 
         $shopcart = $shopcart->unique('id')->each(function ($item) use ($counts) {
             $item->count = $counts[$item->id];
         });
 
-        $html = View::make('top_cart')->with(['shopcart' => $shopcart])->render();
+        $html = View::make('top_cart')->with(['shopcart' => $shopcart,'sum' => $sum])->render();
 
         return Response::json([
             'html' => $html,

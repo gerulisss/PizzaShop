@@ -31,28 +31,31 @@ const app = new Vue({
     el: '#app',
 });
 
+$('#top-cart').hide();
 
 $(document).ready(function(){
-   
-    $(document).on("mouseenter", "#top-cart", function(){
-
+  $(document).on("mouseenter", "#open-cart", function(){
         axios.post(getCartUrl, {
           })
           .then(function (response) {
             console.log(response);
             $('#top-cart').empty().html(response.data.html);
+            $('#top-cart').show();
           })
           .catch(function (error) {
             console.log(error);
           });
 
 
-console.log('aa');
+console.log('veikia');
     });
+
 
     $(document).on("mouseleave", "#top-cart", function(){
         $('#top-cart').empty();
+        $('#top-cart').hide();
     });
+
 
     
 

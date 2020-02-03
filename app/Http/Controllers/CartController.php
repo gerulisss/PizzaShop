@@ -17,15 +17,13 @@ class CartController extends Controller
     {
         
         $shopcart = Session::get('shopcart', collect());
-        
+        $sum = $shopcart->pluck('price')->sum();
         $counts = $shopcart->countBy('id')->toArray();
         $c = $shopcart->unique()->values();
         $shopcart = $shopcart->unique('id')->each(function ($item) use ($counts) {
             $item->count = $counts[$item->id];
         });
 
-        
-        $sum = $shopcart->pluck('price')->sum();
         return view('cart',['shopcart' => $shopcart, 'sum' => $sum]);
         
     }

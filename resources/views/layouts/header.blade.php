@@ -30,12 +30,12 @@
                                    <a class="headers_links" href="#about">About</a>
                                    <a class="headers_links" href="#products">Products</a>
                                    <a class="headers_links" href="#contact">Contact</a>
-                                   <a style="text-decoration:none;" href="{{route('cart')}}"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
-                                   <script>
+                                   <a  style="text-decoration:none;" id="open-cart"  href="{{route('cart')}}"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a>
+                                  <script>
                                    var getCartUrl="{{route('get-cart')}}";
                                    var removeCartUrl="{{route('remove-cart')}}";
                                     </script>
-                                   <a class="mygtukas" id="top-cart">
+                                    <a class="mygtukas" id="top-cart">
                                     @if(session()->has('success_message'))
                                     <div class="alert alert-success" role="alert">
                                         {{session()->get('success_message')}}
@@ -50,14 +50,17 @@
                <style>
                    .mygtukas {
 	background-color: red;
-	color: white;
-    margin-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 40px;
-	display: inline-block;
+	color: #fff;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 30px;
+	display: block;
 	text-decoration: none;
+    border-radius: 5px;
 	border: none;
 	text-align: center;
+    font-size: 14px;
 	}
                    </style>
