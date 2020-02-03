@@ -11,13 +11,13 @@ class Paysera
         $this->config = $config;
     }
 
-    public function pay($email, $amount)
+    public function pay($email, $amount, $order_id)
     {
     try {
         $request = WebToPay::redirectToPayment([
             'projectid'     => $this->config['projectid'],
             'sign_password' => $this->config['sign_password'],
-            'orderid'       => rand(1000000, 9999999),
+            'orderid'       => $order_id,
             'amount'        => $amount,
             'currency'      => 'EUR',
             'country'       => 'LT',
@@ -28,7 +28,8 @@ class Paysera
             'test'          => 1,
         ]);
     } catch (WebToPayException $e) {
-       die('BLOGAI');
+    //    die('BLOGAI');
+    echo $e->getMessage();
     } 
 }
 

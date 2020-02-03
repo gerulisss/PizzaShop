@@ -64,7 +64,7 @@ class PayseraController extends Controller
                 $orderProduct->save();
             }
 
-            $paysera->pay($request->email, $request->amount*100, $request->order); //Laravel lūžimas
+            $paysera->pay($request->email, $request->amount*100, $order->id); //Laravel lūžimas
 
     }
 
@@ -78,6 +78,19 @@ class PayseraController extends Controller
     public function accept(Paysera $paysera)
     {
         $info = $paysera->getPayment();
+        
+        if ($info[3] == 1) {
+            $orderId = $info[0];
+
+            $order = Order::where('id', $orderId)->first();
+
+            $order->status = 1;
+            $order->save();
+
+            Session::forget('cart');
+
+        }
+        
         return redirect()->route('ok');
     }
 

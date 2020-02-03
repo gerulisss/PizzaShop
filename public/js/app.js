@@ -49556,7 +49556,7 @@ $(document).ready(function () {
     axios.post(getCartUrl, {}).then(function (response) {
       console.log(response);
       $('#top-cart').empty().html(response.data.html);
-      $('#top-cart').show();
+      $('#top-cart').show(500);
     })["catch"](function (error) {
       console.log(error);
     });
@@ -49564,7 +49564,7 @@ $(document).ready(function () {
   });
   $(document).on("mouseleave", "#top-cart", function () {
     $('#top-cart').empty();
-    $('#top-cart').hide();
+    $('#top-cart').hide(500);
   });
   $(document).on("click", ".remove-product", function () {
     var id = $(this).data('productId');

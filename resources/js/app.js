@@ -40,7 +40,7 @@ $(document).ready(function(){
           .then(function (response) {
             console.log(response);
             $('#top-cart').empty().html(response.data.html);
-            $('#top-cart').show();
+            $('#top-cart').show(500);
           })
           .catch(function (error) {
             console.log(error);
@@ -52,8 +52,8 @@ console.log('veikia');
 
 
     $(document).on("mouseleave", "#top-cart", function(){
-        $('#top-cart').empty();
-        $('#top-cart').hide();
+      $('#top-cart').empty();
+      $('#top-cart').hide(500);
     });
 
 
