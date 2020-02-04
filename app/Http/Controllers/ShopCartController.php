@@ -102,6 +102,17 @@ class ShopCartController extends Controller
 
 
     }
+
+    
+    public function destroy(Product $product)
+    {
+        $shopcart = Session::get( 'shopcart', collect());
+        $shopcart = $shopcart->where('id', '!=', $product->id);
+
+        Session::put(['shopcart' => $shopcart]);
+
+        return redirect()->back();
+    }
     
 
 }

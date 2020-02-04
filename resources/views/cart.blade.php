@@ -32,7 +32,13 @@
     </div>
     <div class="product-removal">
       {{-- <a style="text-decoration: none;" href="{{route('remove', [$product])}}"><div class="btn"><span>Ištrinti</span></div></a> --}}
-      <span class="remove-product" data-product-id="{{$product->id}}">Ištrinti</span>
+      {{-- <span class="remove-product" data-product-id="{{$product->id}}">Ištrinti</span> --}}
+      <form action="{{ route('shopcart.destroy', $product) }}" method="post">
+        @csrf
+        @method('delete')
+        <button class="btn" type="submit"><span>Istrinti</span>
+        </button>
+    </form>
     </div>
     <div class="product-line-price">{{$product->price}}</div>
   </div>

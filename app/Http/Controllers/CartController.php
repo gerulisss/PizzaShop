@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Group;
+use App\Product;
 use Session;
 
 class CartController extends Controller
