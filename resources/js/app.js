@@ -50,11 +50,11 @@ $(document).ready(function(){
 console.log('veikia');
     });
 
-
     $(document).on("mouseleave", "#top-cart", function(){
       $('#top-cart').empty();
       $('#top-cart').hide(500);
     });
+
 
 
     
@@ -76,5 +76,17 @@ console.log('veikia');
       console.log(id);
   });
 
+  $('.product_description').find('a').click(function (event){
+    event.preventDefault();
+    alert("Preke sekmingai ideta i krepseli!");
+    $.ajax({
+      url: $(this).attr('href')
+      ,success: function(response) {
+        }
+    });
+    return false;
+});
 
 });
+
+

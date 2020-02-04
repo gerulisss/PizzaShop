@@ -49578,6 +49578,15 @@ $(document).ready(function () {
     });
     console.log(id);
   });
+  $('.product_description').find('a').click(function (event) {
+    event.preventDefault();
+    alert("Preke sekmingai ideta i krepseli!");
+    $.ajax({
+      url: $(this).attr('href'),
+      success: function success(response) {}
+    });
+    return false;
+  });
 });
 
 /***/ }),

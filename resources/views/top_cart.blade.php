@@ -6,6 +6,7 @@
 @endforeach
 {{-- Bendra suma: {{$sum}} € --}}
 @else 
+<br><br>
 Krepšelis yra tuščias
 @endif 
 @endif

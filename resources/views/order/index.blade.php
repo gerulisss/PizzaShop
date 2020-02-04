@@ -9,7 +9,10 @@
                 </div>
                 <div class="card-body">
                   @foreach ($orders as $order)
-                    ID: {{$order->id}}  būsena: {{$order->status}} užsakymo kaina: {{$order->price}} pristatymo kaina: {{$order->delivery_price}} krepšelio kaina: {{$order->cart_price}} kliento id: {{$order->client_id}}
+                    ID: {{$order->id}}
+                    būsena: {{$order->status}} 
+                    užsakymo kaina: {{$order->price}}€
+                    kliento id: {{$order->client_id}}
                   </form>
                   <br>
                 @endforeach

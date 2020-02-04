@@ -51,7 +51,7 @@
                    .mygtukas {
 	background-color: red;
 	color: #fff;
-    margin-top: 8px;
+    margin-top: -5px;
     margin-bottom: 8px;
     padding-left: 5px;
     padding-right: 5px;

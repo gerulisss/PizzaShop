@@ -23,7 +23,15 @@ class ShopCartController extends Controller
 
         Session::put('shopcart', $shopcart);
 
-        return redirect()->back()->with('success_message', 'Produktas idėtas į krepšelį!');
+        $html = View::make('show')->with(['shopcart' => $shopcart,'sum' => $sum])->render();
+
+        return Response::json([
+            'html' => $html,
+
+        ], 
+        200);
+
+        // return redirect()->back()->with('success_message', 'Produktas idėtas į krepšelį!');
     }
 
     //Viska istrina is sesijos
@@ -94,5 +102,6 @@ class ShopCartController extends Controller
 
 
     }
+    
 
 }
