@@ -11,6 +11,8 @@ BIT užduotis: sukurti picos užsakymo sistemą su integruota PaySera mokėjimų
 
 This project is for educational porpuses only. Pull request are welcome, but priority for my real-life students! Thank you for your cooperation!
 
+DEMO: http://pizzaeshop.herokuapp.com/
+
 # Author
 
 [RokasM](https://github.com/gerulisss)
